@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A restaurant review app project for Udacity"/>
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,900&display=swap" rel="stylesheet">
+    <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
+    <title>Restaurant Reviews</title>
+  </head>
+  <body class="wrapper">
+    <header>
+      <nav>
+        <h1><a href="/">Restaurant Reviews</a></h1>
+      </nav>
+    </header>
+    <main id="maincontent">
+      <section id="map-container" role="application" aria-hidden="true">
+        <div id="map" role="application" aria-hidden="true"></div>
+      </section>
+      <section role="main" id="selection">
+        <div class="filter-options" role="combobox" aria-labelledby="filter">
+          <h2 tabindex="0" id="filter">Filter Results</h2>
+          <select role="listbox" tabindex="0" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          <select role="listbox" tabindex="0" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
+        <ul tabindex="0" id="restaurants-list"></ul>
+      </section>
+    </main>
+    <footer id="footer" role="contentinfo">
+      &copy; 2019 <a href="/"><strong>Restaurant Reviews</strong></a>. <br> All Rights Reserved.
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+    <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+    <script src="/js/register.js"></script>
+    </body>
+</html>
